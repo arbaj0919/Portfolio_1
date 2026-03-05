@@ -3,6 +3,12 @@ pipeline {
 
     stages {
 
+        stage('Checkout Code') {
+            steps {
+                git branch: 'main', url: 'https://github.com/arbaj0919/Portfolio_1.git'
+            }
+        }
+
         stage('Build') {
             steps {
                 echo 'Building project...'
